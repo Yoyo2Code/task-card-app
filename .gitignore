@@ -1,0 +1,12 @@
+#System Files
+.DS_Store
+Thumbs.db
+
+npm-debug.log
+node_modules
+
+**/*.map
+#src/**/*.js
+app/**/*.js
+!app/assets/*.js
+api/**/*.js
