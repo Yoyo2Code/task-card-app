@@ -25,5 +25,6 @@ export class AppComponent {
     addTask(num: number, str?:string) {
         let task = new Task(this.currentTask.content, this.currentTask.completed);
         this.tasks.push(task);
+        this.currentTask.content = null;
     }
 }
