@@ -10,16 +10,7 @@ import { Task } from './model/task';
 })
 
 export class AppComponent {
-    private tasks = [
-        new Task(
-            "Buy a Monkey",
-            false
-        ),
-        new Task(
-            "Walk the turtle",
-            false
-        )
-    ]
+    private tasks: Task[] = [];
     private currentTask = new Task(null, false)
 
     addTask(num: number, str?:string) {

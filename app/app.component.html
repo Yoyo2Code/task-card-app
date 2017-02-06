@@ -6,11 +6,15 @@
                     <label for="content-field" class="sr-only"></label>
                     <input type="text" class="form-control" id="content-field" required placeholder="Enter a task..." [(ngModel)]="currentTask.content" name="content">
                 </div>
-                <button type="submit" class="btn btn-primary"[disabled]="taskForm.form"><i class="fa fa-plus" aria-hidden="true"></i>Add Task</button>
+                <button type="submit" class="btn btn-primary"[disabled]="taskForm.form.invalid"><i class="fa fa-plus" aria-hidden="true"></i>Add Task</button>
             </form>
         </div>
     </div>
     <div class="row">
         <app-card *ngFor="let task of tasks" [task]="task" ></app-card>
+        <h5 *ngIf="tasks.length === 0" >
+            <p>There currently are no tasks</p>
+            <p>Use the form above to create a task</p>
+        </h5>
     </div>
 </div>
